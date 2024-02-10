@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    background-color: #101720;
+}
+
+/* #17212e */
+
+h1 {
+    font-size: 5rem;
+}
+
+kbd {
+    color: white;
+}
+
+#container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.item {
+    border: 1px solid white;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+#img-container {
+    position: relative;
+}
+
+#drumkit-img {
+    border: 3px solid #1c2838;
+    border-radius: 50px 50px 0 0;
+}
+
+.triggers {
+    position: absolute;
+    /* border: 2px solid red; */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.triggers:hover {
+    box-shadow: 0 0 25px 5px blue;
+    transition: box-shadow 0.3s ease-out;
+}
+
+#clap-trigger {
+    width: 160px;
+    height: 25px;
+    top: 295px;
+    left: 82px;
+    transform: rotate(20deg);
+
+}
+
+#hihat-trigger {
+    width: 160px;
+    height: 25px;
+    top: 362px;
+    left: 165px;
+    transform: rotate(15deg);
+
+}
+
+#kick-trigger {
+    width: 250px;
+    height: 250px;
+    top: 500px;
+    left: 380px;
+
+}
+
+#openhat-trigger {
+    width: 215px;
+    height: 60px;
+    top: 245px;
+    left: 210px;
+    transform: rotate(10deg);
+}
+
+#ride-trigger {
+    width: 215px;
+    height: 70px;
+    top: 228px;
+    left: 585px;
+    transform: rotate(-12deg);
+}
+
+#snare-trigger {
+    width: 195px;
+    height: 85px;
+    top: 445px;
+    left: 592px;
+    border-radius: 20%;
+}
+
+#tink-trigger {
+    width: 145px;
+    height: 25px;
+    top: 325px;
+    left: 725px;
+
+}
+
+#tom1-trigger {
+    width: 145px;
+    height: 142px;
+    top: 342px;
+    left: 350px;
+    transform: rotate(5deg);
+    border-radius: 35%;
+}
+
+#tom2-trigger {
+    width: 135px;
+    height: 142px;
+    top: 342px;
+    left: 518px;
+    transform: rotate(-5deg);
+    border-radius: 35%;
+}

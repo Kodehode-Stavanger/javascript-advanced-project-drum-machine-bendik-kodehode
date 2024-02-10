@@ -1,5 +1,5 @@
-const container = document.getElementById("container");
-const triggerBoxes = document.getElementsByClassName("triggers");
+const container = document.querySelector("#container");
+const triggerBoxes = document.querySelectorAll(".triggers");
 
 // const hotKeys = {
 //     clap:    "q",
@@ -41,8 +41,10 @@ function playSound(key) {
     if (hotKeys[key]) new Audio(`./sounds/${hotKeys[key]}.wav`).play();
     }
 
-// window.addEventListener("click", log);
-
-// function log(event) {
-//     console.log(event)
-// }
+triggerBoxes.forEach(trigger => {
+    trigger.addEventListener("click", () => {
+        const soundName = trigger.id.split("-")[0];
+        const soundKey = Object.keys(hotKeys).find(key => hotKeys[key] === soundName);
+        playSound(soundKey); 
+    })
+});

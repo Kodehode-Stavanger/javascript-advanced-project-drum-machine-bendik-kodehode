@@ -12,13 +12,15 @@ body {
     background-color: #101720;
 }
 
-/* #17212e */
-
 h1 {
     font-size: 5rem;
 }
 
 kbd {
+    color: white;
+}
+
+.drum-item p {
     color: white;
 }
 
@@ -28,11 +30,17 @@ kbd {
     width: 100%;
 }
 
-.item {
+.drum-item {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #374e6d;
+    cursor: pointer;
+    padding: 10px 15px;
+} 
+
+.hotkey {
     border: 1px solid white;
     padding: 5px 10px;
-    cursor: pointer;
-
 }
 
 #img-container {
@@ -112,7 +120,6 @@ kbd {
     height: 25px;
     top: 325px;
     left: 725px;
-
 }
 
 #tom-trigger_1 {
@@ -131,4 +138,15 @@ kbd {
     left: 518px;
     transform: rotate(-5deg);
     border-radius: 35%;
+}
+
+.drum-glow-up {
+    /* box-shadow: 0 0 25px 5px white;
+    transition: box-shadow 0.1s ease-out; */
+    animation: glow-up 0.2s ease-out;
+}
+
+@keyframes glow-up {
+    0% {box-shadow: 0 0 25px 0 white}
+    100% {box-shadow: 0 0 25px 5px white};
 }

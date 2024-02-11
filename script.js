@@ -1,4 +1,4 @@
-const container = document.querySelector("#container");
+const keyContainer = document.querySelector("#key-container");
 const triggerBoxes = document.querySelectorAll(".triggers");
 
 const hotKeys = {
@@ -11,6 +11,11 @@ const hotKeys = {
     d: "tink",
     f: "tom"
 };
+
+window.addEventListener("keypress", (event) => {
+    playSound(event.key);
+    drumGlow(event.key)
+});
 
 for (let key in hotKeys) {
     const drumItem = document.createElement("div");
@@ -27,21 +32,12 @@ for (let key in hotKeys) {
 
     drumHotkey.append(drumKey);
     drumItem.append(drumName, drumHotkey);
-    container.append(drumItem);
+    keyContainer.append(drumItem);
 
-    drumHotkey.addEventListener("click", () => {
+    drumItem.addEventListener("click", () => {
         playSound(key);
         drumGlow(key);
     });
-};
-
-window.addEventListener("keypress", (event) => {
-    playSound(event.key);
-    drumGlow(event.key)
-});
-
-function playSound(key) {
-    if (hotKeys[key]) new Audio(`./sounds/${hotKeys[key]}.wav`).play();
 };
 
 triggerBoxes.forEach(trigger => {
@@ -52,11 +48,15 @@ triggerBoxes.forEach(trigger => {
     });
 });
 
+function playSound(key) {
+    if (hotKeys[key]) new Audio(`./sounds/${hotKeys[key]}.wav`).play();
+};
+
 function drumGlow(key) {
     triggerBoxes.forEach(trigger => {
         if (trigger.id.split("-")[0] === hotKeys[key]) {
             trigger.classList.add("drum-glow-up");
-            setTimeout(() => trigger.classList.remove("drum-glow-up"), 200);
+            setTimeout(() => trigger.classList.remove("drum-glow-up"), 100);
         };
     });
 };

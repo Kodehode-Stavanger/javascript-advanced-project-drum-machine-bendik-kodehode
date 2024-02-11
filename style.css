@@ -8,12 +8,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
     font-size: 16px;
     background-color: #101720;
 }
 
 h1 {
     font-size: 5rem;
+    color: white;
+    font-family: 'Metal Mania', system-ui;
+    letter-spacing: 0.4rem;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
 }
 
 kbd {
@@ -24,10 +33,9 @@ kbd {
     color: white;
 }
 
-#container {
+#key-container {
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
 }
 
 .drum-item {
@@ -45,6 +53,7 @@ kbd {
 
 #img-container {
     position: relative;
+    
 }
 
 #drumkit-img {
@@ -54,10 +63,8 @@ kbd {
 
 .triggers {
     position: absolute;
-    /* border: 2px solid red; */
     cursor: pointer;
     border-radius: 50%;
-    transition: box-shadow 0.2s ease-in;
 }
 
 .triggers:hover {
@@ -71,7 +78,6 @@ kbd {
     top: 295px;
     left: 82px;
     transform: rotate(20deg);
-
 }
 
 #hihat-trigger {
@@ -80,7 +86,6 @@ kbd {
     top: 362px;
     left: 165px;
     transform: rotate(15deg);
-
 }
 
 #kick-trigger {
@@ -88,7 +93,6 @@ kbd {
     height: 250px;
     top: 500px;
     left: 380px;
-
 }
 
 #openhat-trigger {
@@ -141,12 +145,6 @@ kbd {
 }
 
 .drum-glow-up {
-    /* box-shadow: 0 0 25px 5px white;
-    transition: box-shadow 0.1s ease-out; */
-    animation: glow-up 0.2s ease-out;
-}
-
-@keyframes glow-up {
-    0% {box-shadow: 0 0 25px 0 white}
-    100% {box-shadow: 0 0 25px 5px white};
+    box-shadow: 0 0 25px 5px white;
+    transition: box-shadow 0.1s ease-out;
 }

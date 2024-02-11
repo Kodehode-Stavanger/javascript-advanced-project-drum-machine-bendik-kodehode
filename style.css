@@ -16,13 +16,14 @@ body {
 
 h1 {
     font-size: 5rem;
-    color: white;
+    color: #838b9b;
+    text-shadow: 1px 1px 2px #222222;
     font-family: 'Metal Mania', system-ui;
     letter-spacing: 0.4rem;
     position: absolute;
     width: 100%;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 35px;
 }
 
 kbd {
@@ -30,35 +31,41 @@ kbd {
 }
 
 .drum-item p {
-    color: white;
+    color: rgb(231, 231, 231);
+    font-family: 'RocknRoll One', sans-serif;
+    font-size: 0.8rem;
+
 }
 
 #key-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
 }
 
 .drum-item {
     display: flex;
     flex-direction: column;
-    border: 2px solid #374e6d;
+    align-items: center;
     cursor: pointer;
-    padding: 10px 15px;
+    margin: 0 15px;
 } 
 
 .hotkey {
     border: 1px solid white;
+    margin-top: 1px;
     padding: 5px 10px;
 }
 
 #img-container {
     position: relative;
+    margin-bottom: 5px;
+    box-shadow: 0 -50px 100px 5px #838b9b;
+    border-radius: 50% 50% 0 0 ;
+    overflow: hidden;
     
-}
-
-#drumkit-img {
-    border: 3px solid #1c2838;
-    border-radius: 50% 50% 2% 2%;
 }
 
 .triggers {
